@@ -19,6 +19,8 @@
 		53CE3ED5198983D300EA5FEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CE3EBD198983D200EA5FEF /* UIKit.framework */; };
 		53CE3EDD198983D300EA5FEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53CE3EDB198983D300EA5FEF /* InfoPlist.strings */; };
 		53CE3EDF198983D300EA5FEF /* RuBeaconCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CE3EDE198983D300EA5FEF /* RuBeaconCoreTests.m */; };
+		53CE3EEE198984E000EA5FEF /* RBCCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CE3EEC198984E000EA5FEF /* RBCCoreViewController.m */; };
+		53CE3EEF198984E000EA5FEF /* RBCCoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE3EED198984E000EA5FEF /* RBCCoreViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		53CE3EDA198983D300EA5FEF /* RuBeaconCoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RuBeaconCoreTests-Info.plist"; sourceTree = "<group>"; };
 		53CE3EDC198983D300EA5FEF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53CE3EDE198983D300EA5FEF /* RuBeaconCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuBeaconCoreTests.m; sourceTree = "<group>"; };
+		53CE3EEB198984E000EA5FEF /* RBCCoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCCoreViewController.h; sourceTree = "<group>"; };
+		53CE3EEC198984E000EA5FEF /* RBCCoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCCoreViewController.m; sourceTree = "<group>"; };
+		53CE3EED198984E000EA5FEF /* RBCCoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBCCoreViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,9 @@
 		53CE3EAD198983D200EA5FEF = {
 			isa = PBXGroup;
 			children = (
+				53CE3EEB198984E000EA5FEF /* RBCCoreViewController.h */,
+				53CE3EEC198984E000EA5FEF /* RBCCoreViewController.m */,
+				53CE3EED198984E000EA5FEF /* RBCCoreViewController.xib */,
 				53CE3EBF198983D200EA5FEF /* RuBeaconCore */,
 				53CE3ED8198983D300EA5FEF /* RuBeaconCoreTests */,
 				53CE3EB8198983D200EA5FEF /* Frameworks */,
@@ -222,6 +230,7 @@
 			files = (
 				53CE3EC4198983D200EA5FEF /* InfoPlist.strings in Resources */,
 				53CE3ECC198983D200EA5FEF /* Images.xcassets in Resources */,
+				53CE3EEF198984E000EA5FEF /* RBCCoreViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +251,7 @@
 			files = (
 				53CE3ECA198983D200EA5FEF /* RBCAppDelegate.m in Sources */,
 				53CE3EC6198983D200EA5FEF /* main.m in Sources */,
+				53CE3EEE198984E000EA5FEF /* RBCCoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +448,7 @@
 				53CE3EE4198983D300EA5FEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53CE3EE5198983D300EA5FEF /* Build configuration list for PBXNativeTarget "RuBeaconCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +457,7 @@
 				53CE3EE7198983D300EA5FEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

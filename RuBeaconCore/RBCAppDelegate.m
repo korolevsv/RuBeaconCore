@@ -7,6 +7,8 @@
 //
 
 #import "RBCAppDelegate.h"
+// Working with .xib
+#import "RBCCoreViewController.h"
 
 @implementation RBCAppDelegate
 
@@ -14,6 +16,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    RBCCoreViewController *beaconVC = [[RBCCoreViewController alloc] init];
+    self.window.rootViewController = beaconVC;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
