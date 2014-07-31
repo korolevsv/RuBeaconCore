@@ -15,7 +15,8 @@
 @end
 
 @implementation RBCCoreViewController
-
+//Stick-N-Find UUID:
+static NSString * const defaultUUID = @"9F4916B1-0864-49BC-8F09-1445F9FABDEF";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,18 +39,15 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)initButton:(id)sender {
-    self.beacon = [[RBCBeacon alloc] init];
-    
+//    self.beacon = [[RBCBeacon alloc] init];
+    self.beacon = [[RBCBeacon alloc] initWithRegion:defaultUUID];
 }
 
 - (IBAction)startButton:(id)sender {
-    [self.beacon start];
-    
-
-
+    [self.beacon startRanging];
 }
 
 - (IBAction)stopButton:(id)sender {
-    [self.beacon stop];
+    [self.beacon stopRanging];
 }
 @end

@@ -14,7 +14,8 @@
 // Later we'll use CBPeripheralManager
 //@interface RBCBeacon : NSObject<CLLocationManagerDelegate, CBPeripheralManagerDelegate>
 @interface RBCBeacon : NSObject<CLLocationManagerDelegate>
-- (void) start;
-- (void) stop;
+- (id)initWithRegion:(NSString *)proximityUUID;
+- (void) startRanging;
+- (void) stopRanging;
 
 @end

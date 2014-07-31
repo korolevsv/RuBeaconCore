@@ -9,7 +9,7 @@
 #import "RBCBeacon.h"
 
 //Stick-N-Find UUID:
-static NSString * const kUUID = @"9F4916B1-0864-49BC-8F09-1445F9FABDEF";
+static NSString * const defaultUUID = @"9F4916B1-0864-49BC-8F09-1445F9FABDEF";
 static NSString * const kIdentifier = @"SomeIdentifier";
 
 
@@ -32,28 +32,36 @@ static NSString * const kIdentifier = @"SomeIdentifier";
 @implementation RBCBeacon
 
 - (id)init {
+    NSString *regionUUID = defaultUUID;
     self = [super init];
     [self createLocationManager];
-    [self createBeaconRegion];
+    [self createBeaconRegion:regionUUID];
     NSLog(@"LocationManager initialized");
     return self;
 }
 
-- (void) start {
+- (id)initWithRegion:(NSString *)proximityUUID {
+    self = [super init];
+    [self createLocationManager];
+    [self createBeaconRegion:proximityUUID];
+    NSLog(@"LocationManager initialized");
+    return self;
+}
+
+- (void) startRanging {
 //    [self startRangingForBeacons];
     [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
     NSLog(@"Ranging turned on for region: %@.", self.beaconRegion);
 }
-- (void) stop {
+- (void) stopRanging {
     [self stopRangingForBeacons];
 }
 
-- (void)createBeaconRegion
-{
+- (void)createBeaconRegion:(NSString *)regionUUID {
     if (self.beaconRegion)
         return;
     
-    NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:kUUID];
+    NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:regionUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID identifier:kIdentifier];
     self.beaconRegion.notifyEntryStateOnDisplay = YES;
 }
@@ -67,15 +75,6 @@ static NSString * const kIdentifier = @"SomeIdentifier";
 }
 
 #pragma mark - Beacon ranging
-- (void)changeRangingState:sender
-{
-    UISwitch *theSwitch = (UISwitch *)sender;
-    if (theSwitch.on) {
-        [self startRangingForBeacons];
-    } else {
-        [self stopRangingForBeacons];
-    }
-}
 
 - (void)startRangingForBeacons
 {
@@ -103,7 +102,6 @@ static NSString * const kIdentifier = @"SomeIdentifier";
         return;
     }
     
-    [self createBeaconRegion];
     [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
     
     NSLog(@"Ranging turned on for region: %@.", self.beaconRegion);
