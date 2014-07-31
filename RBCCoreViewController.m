@@ -7,15 +7,15 @@
 //
 
 #import "RBCCoreViewController.h"
+#import "RBCBeacon.h"
 
 @interface RBCCoreViewController ()
-
-//- (IBAction)startButton:(id)sender;
-//- (IBAction)stopButton:(id)sender;
+@property RBCBeacon *beacon;
 
 @end
 
 @implementation RBCCoreViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,10 +37,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)initButton:(id)sender {
+    self.beacon = [[RBCBeacon alloc] init];
+    
+}
 
 - (IBAction)startButton:(id)sender {
+    [self.beacon start];
+    
+
+
 }
 
 - (IBAction)stopButton:(id)sender {
+    [self.beacon stop];
 }
 @end

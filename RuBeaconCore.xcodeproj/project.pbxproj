@@ -21,6 +21,7 @@
 		53CE3EDF198983D300EA5FEF /* RuBeaconCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CE3EDE198983D300EA5FEF /* RuBeaconCoreTests.m */; };
 		53CE3EEE198984E000EA5FEF /* RBCCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CE3EEC198984E000EA5FEF /* RBCCoreViewController.m */; };
 		53CE3EEF198984E000EA5FEF /* RBCCoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE3EED198984E000EA5FEF /* RBCCoreViewController.xib */; };
+		53CE3EF519899D8D00EA5FEF /* RBCBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CE3EF419899D8D00EA5FEF /* RBCBeacon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		53CE3EEB198984E000EA5FEF /* RBCCoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCCoreViewController.h; sourceTree = "<group>"; };
 		53CE3EEC198984E000EA5FEF /* RBCCoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCCoreViewController.m; sourceTree = "<group>"; };
 		53CE3EED198984E000EA5FEF /* RBCCoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBCCoreViewController.xib; sourceTree = "<group>"; };
+		53CE3EF319899D8D00EA5FEF /* RBCBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCBeacon.h; sourceTree = "<group>"; };
+		53CE3EF419899D8D00EA5FEF /* RBCBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCBeacon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 		53CE3EAD198983D200EA5FEF = {
 			isa = PBXGroup;
 			children = (
+				53CE3EF319899D8D00EA5FEF /* RBCBeacon.h */,
+				53CE3EF419899D8D00EA5FEF /* RBCBeacon.m */,
 				53CE3EEB198984E000EA5FEF /* RBCCoreViewController.h */,
 				53CE3EEC198984E000EA5FEF /* RBCCoreViewController.m */,
 				53CE3EED198984E000EA5FEF /* RBCCoreViewController.xib */,
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53CE3ECA198983D200EA5FEF /* RBCAppDelegate.m in Sources */,
+				53CE3EF519899D8D00EA5FEF /* RBCBeacon.m in Sources */,
 				53CE3EC6198983D200EA5FEF /* main.m in Sources */,
 				53CE3EEE198984E000EA5FEF /* RBCCoreViewController.m in Sources */,
 			);
